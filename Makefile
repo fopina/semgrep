@@ -92,9 +92,10 @@ unused-libs:
 .PHONY: core
 core:
 	$(MAKE) minimal-build
-	strip semgrep-core
 	# make executables easily accessible for manual testing:
 	ln -s semgrep-core bin/osemgrep
+	chmod +w semgrep-core
+	strip semgrep-core
 
 #history: was called the 'all' target in semgrep-core/Makefile before
 .PHONY: core-bc
