@@ -94,8 +94,8 @@ core:
 	$(MAKE) minimal-build
 	# make executables easily accessible for manual testing:
 	ln -s semgrep-core bin/osemgrep
-	chmod +w semgrep-core
-	strip semgrep-core
+	chmod +w _build/install/default/bin/semgrep-core
+	strip _build/install/default/bin/semgrep-core
 
 #history: was called the 'all' target in semgrep-core/Makefile before
 .PHONY: core-bc
