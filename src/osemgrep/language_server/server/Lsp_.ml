@@ -130,7 +130,7 @@ let create_progress title message =
   in
   let request, _id = request progress in
   let start =
-   Progress.Begin (WorkDoneProgressBegin.create ~message ~title ())
+    Progress.Begin (WorkDoneProgressBegin.create ~message ~title ())
   in
   let progress = SN.WorkDoneProgress (ProgressParams.create token start) in
   ([ request; notify progress ], token)
